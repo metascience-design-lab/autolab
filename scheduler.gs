@@ -16,8 +16,8 @@ function myFunction() {
   var now = new Date();
   var yearLater = new Date(now.getTime() + (365 *24 * 60 * 60 * 1000)); // next year
   
-  
-  var events = CalendarApp.getEvents(now, yearLater); 
+  var calendarId = "ldmlt0n144ic4vn6ee5973256o@group.calendar.google.com";  //calendar also needs an id
+  var events = CalendarApp.getCalendarById(calendarId).getEvents(now, yearLater); 
   for (var i = 0; i < events.length; i++) { //each event
     var guestList = events[i].getGuestList(false); 
     for (var j = 0; j < guestList.length; j++) { //check its guest list for people that are in the reject email list
