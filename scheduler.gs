@@ -4,10 +4,12 @@ function myFunction() {
   var range = sheet.getDataRange(); //a range of all the cells
   var objects = range.getValues(); //gets the values
   
+  var eligibilityColumn = 'x';
+  
   
   var rejectEmails = [] 
   for (var i = 0; i < objects.length; i++) { //collect all the emails that we need to reject from.
-    if (objects[i][20] == 'Reject') {
+    if (objects[i][eligibilityColumn.charCodeAt(0) - 'a'.charCodeAt(0)] == 'Reject') {
       rejectEmails.push(objects[i][1]);
     }
   }
