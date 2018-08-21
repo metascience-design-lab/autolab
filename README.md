@@ -1,11 +1,14 @@
- # Metascience Design Lab - Project Team 4
+# Metascience Design Lab - Project Team 4
 
-Scripts for automation.
+Scripts for automating the screening and scheduling of human participants for laboratory research.
+
+
+## highlighter.gs
+
+Highlights the applicant's data based on whether it is 'Accept' (green), 'Reject' (red) or 'Maybe' (orange).  
+
 
 ## scheduler.gs
 
-Takes a list of people from the spreadsheet, finds the ones that are not eligible and cancels all appointments with them.  To use, change the variables `sheetId`, `calendarId` and `eligibilityColumn` with the correct fields.
-
-## highlighter
-
-Highlights the row based on whether it is 'Accept', 'Reject' or 'Maybe'.  
+Takes a list of people from the spreadsheet, finds the ones that are not eligible, and cancels all of their appointments.
+To generalize its use, change the variables `sheetId`, `calendarId` and `eligibilityColumn` to the correct fields.
